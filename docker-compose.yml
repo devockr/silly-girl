@@ -1,0 +1,13 @@
+version: '3'
+services:
+  SillyGirl:
+    build: .
+    image: devockr/silly-girl:latest
+    container_name: SillyGirl
+    hostname: SillyGirl
+    network_mode: bridge
+    restart: always
+    ports:
+      - 8090:8080
+    volumes:
+      - ./data:/etc/sillyGirl
